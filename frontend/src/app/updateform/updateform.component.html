@@ -1,0 +1,9 @@
+
+<form  [formGroup]="postForm" (ngSubmit)="updateitem(postForm.value)" novalidate>
+     <label for="title">Title</label> 
+      <input #title formControlName="title">
+     <label for="body">Body</label> 
+      <input #body formControlName="body">  
+      <button class="edbutton" type="submit" [disabled]="!postForm.valid">update</button> 
+      <a routerLink="/"><button class="delbutton">cancle</button></a>
+</form>
